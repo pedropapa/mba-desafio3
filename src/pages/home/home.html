@@ -1,17 +1,22 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Início</ion-title>
+    <ion-title>MBAChat</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <div class="list">
-    <label class="item item-input">
-      <input type="text" placeholder="Nome de usuário" ngModel="name">
-    </label>
-  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <ion-item>
+          <ion-label color="primary">Usuário</ion-label>
+          <ion-input placeholder="Digite seu nome" [(ngModel)]="username"></ion-input>
+        </ion-item>
 
-  <button class="button button-block button-positive" (click)="joinConversation()">
-    Entrar
-  </button>
+        <button ion-button full class="button button-default" (click)="joinConversation(username)">
+          Entrar
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
